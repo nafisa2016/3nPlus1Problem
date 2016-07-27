@@ -14,6 +14,8 @@
 		78CB5D921D49662200C836D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78CB5D901D49662200C836D7 /* LaunchScreen.storyboard */; };
 		78CB5D9D1D49662200C836D7 /* _nPlus1ProblemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB5D9C1D49662200C836D7 /* _nPlus1ProblemTests.swift */; };
 		78CB5DA81D49662200C836D7 /* _nPlus1ProblemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB5DA71D49662200C836D7 /* _nPlus1ProblemUITests.swift */; };
+		78CB5DB71D49673800C836D7 /* MaxCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB5DB51D49673800C836D7 /* MaxCycle.swift */; };
+		78CB5DB81D49673800C836D7 /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB5DB61D49673800C836D7 /* MyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		78CB5DA31D49662200C836D7 /* 3nPlus1ProblemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3nPlus1ProblemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CB5DA71D49662200C836D7 /* _nPlus1ProblemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _nPlus1ProblemUITests.swift; sourceTree = "<group>"; };
 		78CB5DA91D49662200C836D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78CB5DB51D49673800C836D7 /* MaxCycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxCycle.swift; sourceTree = "<group>"; };
+		78CB5DB61D49673800C836D7 /* MyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		78CB5D861D49662200C836D7 /* 3nPlus1Problem */ = {
 			isa = PBXGroup;
 			children = (
+				78CB5DB51D49673800C836D7 /* MaxCycle.swift */,
+				78CB5DB61D49673800C836D7 /* MyButton.swift */,
 				78CB5D871D49662200C836D7 /* AppDelegate.swift */,
 				78CB5D891D49662200C836D7 /* ViewController.swift */,
 				78CB5D8B1D49662200C836D7 /* Main.storyboard */,
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78CB5DB71D49673800C836D7 /* MaxCycle.swift in Sources */,
 				78CB5D8A1D49662200C836D7 /* ViewController.swift in Sources */,
 				78CB5D881D49662200C836D7 /* AppDelegate.swift in Sources */,
+				78CB5DB81D49673800C836D7 /* MyButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +492,7 @@
 				78CB5DAE1D49662200C836D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78CB5DAF1D49662200C836D7 /* Build configuration list for PBXNativeTarget "3nPlus1ProblemTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +501,7 @@
 				78CB5DB11D49662200C836D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78CB5DB21D49662200C836D7 /* Build configuration list for PBXNativeTarget "3nPlus1ProblemUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +510,7 @@
 				78CB5DB41D49662200C836D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
