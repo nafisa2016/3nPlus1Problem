@@ -219,11 +219,9 @@ class ViewController: UIViewController,UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         let validCharacters = CharacterSet(charactersIn: "0123456789")
-        let inputRange = string.characters.indices
-        
-        
+                
         //if entered char is present in  valid character set then returns a valid range
-        if  (string.rangeOfCharacter(from: validCharacters, options: [], range: inputRange) == nil) {
+        if  (string.rangeOfCharacter(from: validCharacters) == nil) {
             
             //invalid char thus don't change the text field string
             return false

@@ -132,7 +132,7 @@ class MaxCycle {
     }
     
     //MARK: computes the cycle length recursively
-    func compute_recurse( _ num : Int) -> Int {
+    @discardableResult func compute_recurse( _ num : Int) -> Int {
         
         var n = num
         
