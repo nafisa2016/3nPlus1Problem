@@ -70,14 +70,14 @@ class ViewController: UIViewController,UITextFieldDelegate {
     }
     
     //MARK:- Iterative computation of  max cycle length
-    @IBAction func displayIterative(sender: UIButton) {
+    @IBAction func displayIterative(_ sender: UIButton) {
         
         compute(false)
         
     }
     
     //MARK:- clears text fields and result label
-    @IBAction func clear(sender: UIButton) {
+    @IBAction func clear(_ sender: UIButton) {
         
         //first text field
         firstTextField.text = ""
@@ -94,13 +94,13 @@ class ViewController: UIViewController,UITextFieldDelegate {
     
     
     //MARK: recursive computation of  max cycle length
-    @IBAction func display(sender: UIButton) {
+    @IBAction func display(_ sender: UIButton) {
         
         compute(true)
     }
     
     //MARK:- compute and display max cycle length
-    func compute(flag : Bool){
+    func compute(_ flag : Bool){
         
         //first textfield is empty - show alert
         if firstTextField.placeholder == "Enter a number"  {
@@ -137,7 +137,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
             }
             
             //start time
-            let startTime = NSDate()
+            let startTime = Date()
             
             
             //instance of MaxCycle class
@@ -147,11 +147,11 @@ class ViewController: UIViewController,UITextFieldDelegate {
             cycle.recursive = flag
             
             //end time
-            let endTime = NSDate()
+            let endTime = Date()
             
             
             //calculate time interval in seconds
-            let computationTime = NSDecimalNumber(double: endTime.timeIntervalSinceDate(startTime))
+            let computationTime = NSDecimalNumber(value: endTime.timeIntervalSince(startTime) as Double)
             
             
             var labelText = ""
@@ -179,51 +179,51 @@ class ViewController: UIViewController,UITextFieldDelegate {
     }
     
     //MARK:- show alert for invalid no
-    func showAlert(desc: String,msg: String) {
+    func showAlert(_ desc: String,msg: String) {
         
         let alert = UIAlertController(title: desc,
                                       message: msg,
-                                      preferredStyle: UIAlertControllerStyle.Alert)
+                                      preferredStyle: UIAlertControllerStyle.alert)
         
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
         
     }
     
     //MARK:- textfield
     
     //if textview empty after user editing show placeholder empty
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         
         if textField.text!.isEmpty {
             textField.placeholder = "Enter a number"
-            textField.textColor = UIColor.lightGrayColor()
+            textField.textColor = UIColor.lightGray
         }
     }
     
     
     //remove placeholder text
-    func textFieldDidBeginEditing(textField: UITextField) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         
         textField.placeholder = nil
     }
     
     //return key
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         textField.resignFirstResponder()
         return true
     }
     
     //text view validation
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        let validCharacters = NSCharacterSet(charactersInString: "0123456789")
-        let inputRange = string.startIndex..<string.endIndex
+        let validCharacters = CharacterSet(charactersIn: "0123456789")
+        let inputRange = string.characters.indices
         
         
         //if entered char is present in  valid character set then returns a valid range
-        if  (string.rangeOfCharacterFromSet(validCharacters, options: [], range: inputRange) == nil) {
+        if  (string.rangeOfCharacter(from: validCharacters, options: [], range: inputRange) == nil) {
             
             //invalid char thus don't change the text field string
             return false

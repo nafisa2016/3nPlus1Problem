@@ -120,7 +120,7 @@ class MaxCycle {
     
     
     //MARK: checks whether the entered number is valid
-    func isValidNum(num : Int)->Bool {
+    func isValidNum(_ num : Int)->Bool {
         
         if (num > 0) && (num < 10000) {
             return true
@@ -132,7 +132,7 @@ class MaxCycle {
     }
     
     //MARK: computes the cycle length recursively
-    func compute_recurse( num : Int) -> Int {
+    func compute_recurse( _ num : Int) -> Int {
         
         var n = num
         
@@ -164,7 +164,7 @@ class MaxCycle {
     }
     
     //MARK: computes the cycle length non recursively
-    func compute_iterate( num : Int) -> Int {
+    func compute_iterate( _ num : Int) -> Int {
         
         var n = num
         
@@ -214,7 +214,7 @@ class MaxCycle {
     }
     
     //MARK: computes the max cycle length
-    func getMaxCycleLength(cycleLength : Int){
+    func getMaxCycleLength(_ cycleLength : Int){
         
         if maxCycleLength < cycleLength {
             maxCycleLength = cycleLength

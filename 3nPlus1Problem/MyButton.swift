@@ -38,12 +38,12 @@ import UIKit
 class MyButton: UIButton {
     
     //MARK:- rounded corner button
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         
-        super.drawRect(rect)
+        super.draw(rect)
         self.layer.cornerRadius = 4.0
         self.layer.masksToBounds = true
-        self.layer.borderColor = UIColor.whiteColor().CGColor
+        self.layer.borderColor = UIColor.white.cgColor
         self.layer.borderWidth = 2.0
         
     }
